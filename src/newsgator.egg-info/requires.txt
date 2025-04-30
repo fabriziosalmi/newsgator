@@ -1,0 +1,8 @@
+feedparser
+requests
+beautifulsoup4
+scikit-learn
+openai
+jinja2
+markdown
+markdown2

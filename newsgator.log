@@ -1,0 +1,121 @@
+2025-04-30 14:29:19,500 - newsgator - INFO - Starting Newsgator workflow
+2025-04-30 14:29:19,500 - newsgator - INFO - Fetching RSS feeds
+2025-04-30 14:29:19,500 - newsgator.feed_processing.feed_processor - INFO - Starting to fetch 24 feeds
+2025-04-30 14:29:19,500 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: BBC News (Category: news)
+2025-04-30 14:29:27,593 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from BBC News
+2025-04-30 14:29:29,091 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: CNN (Category: news)
+2025-04-30 14:29:35,131 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from CNN
+2025-04-30 14:29:36,467 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: Reuters (Category: news)
+2025-04-30 14:29:36,544 - newsgator.feed_processing.feed_processor - WARNING - Feed parsing error for Reuters: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+2025-04-30 14:29:38,559 - newsgator.feed_processing.feed_processor - WARNING - Feed parsing error for Reuters: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+2025-04-30 14:29:40,579 - newsgator.feed_processing.feed_processor - WARNING - Feed parsing error for Reuters: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+2025-04-30 14:29:40,580 - newsgator.feed_processing.feed_processor - WARNING - No articles fetched from Reuters
+2025-04-30 14:29:41,606 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: The Guardian (Category: news)
+2025-04-30 14:29:41,790 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from The Guardian
+2025-04-30 14:29:42,781 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: Al Jazeera (Category: news)
+2025-04-30 14:29:45,036 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from Al Jazeera
+2025-04-30 14:29:45,823 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: NPR News (Category: news)
+2025-04-30 14:29:46,495 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 10 articles from NPR News
+2025-04-30 14:29:47,863 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: ABC News (Category: news)
+2025-04-30 14:29:51,777 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from ABC News
+2025-04-30 14:29:52,776 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: Washington Post (Category: news)
+2025-04-30 14:30:35,556 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/world/2025/04/30/lynxes-rogue-rewilding-uk-scotland/
+2025-04-30 14:31:09,741 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/world/2025/04/30/vietnam-war-50th-anniversary-end-trump/
+2025-04-30 14:31:43,927 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/world/2025/04/29/francis-conservative-pope-sarah-burke/
+2025-04-30 14:32:18,109 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/world/2025/04/30/canada-election-trump-backlash-australia/
+2025-04-30 14:32:52,304 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/world/2025/04/29/canada-election-carney-challenges-trump/
+2025-04-30 14:33:26,485 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/world/2025/04/29/spain-power-outage-cause-blackouts-travel-chaos/
+2025-04-30 14:34:00,681 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/world/2025/04/29/canada-election-results-takeaways-trump-tariffs/
+2025-04-30 14:34:34,886 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/world/interactive/2025/russia-detention-ukraine-civilians-occupation/
+2025-04-30 14:35:09,032 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/world/2025/04/29/china-united-states-trade-war-bully/
+2025-04-30 14:35:43,285 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/world/2025/04/28/canada-election-results-carney-win-liberals-trump/
+2025-04-30 14:36:17,472 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/world/2025/04/29/kashmir-attack-pahalgam-india-pakistan/
+2025-04-30 14:36:51,666 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/climate-environment/2025/04/28/spain-power-outage-portugal-france-blackout/
+2025-04-30 14:37:25,850 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/world/2025/04/28/yemen-houthi-migrants-center-killed-us-strike/
+2025-04-30 14:38:00,035 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/world/2025/04/28/international-court-justice-israel-palestinians/
+2025-04-30 14:38:34,225 - newsgator.feed_processing.feed_processor - WARNING - Failed to fetch article content after 2 retries: https://www.washingtonpost.com/world/2025/04/28/russia-ceasefire-victory-day-ukraine/
+2025-04-30 14:38:34,225 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from Washington Post
+2025-04-30 14:38:35,160 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: Associated Press (Category: news)
+2025-04-30 14:38:35,390 - newsgator.feed_processing.feed_processor - WARNING - Feed parsing error for Associated Press: <unknown>:2:20: not well-formed (invalid token)
+2025-04-30 14:38:37,589 - newsgator.feed_processing.feed_processor - WARNING - Feed parsing error for Associated Press: <unknown>:2:20: not well-formed (invalid token)
+2025-04-30 14:38:39,752 - newsgator.feed_processing.feed_processor - WARNING - Feed parsing error for Associated Press: <unknown>:2:20: not well-formed (invalid token)
+2025-04-30 14:38:39,752 - newsgator.feed_processing.feed_processor - WARNING - No articles fetched from Associated Press
+2025-04-30 14:38:41,113 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: Yahoo News (Category: news)
+2025-04-30 14:38:41,982 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://finance.yahoo.com/news/gm-recalling-nearly-600-000-122158642.html (13 chars)
+2025-04-30 14:38:42,562 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://www.yahoo.com/news/model-noticed-weird-smell-hotel-151941020.html (13 chars)
+2025-04-30 14:38:43,224 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://www.yahoo.com/news/southern-california-man-violently-beaten-060029064.html (13 chars)
+2025-04-30 14:38:43,774 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://www.yahoo.com/news/disgraced-cardinal-becciu-formally-withdraws-080126870.html (13 chars)
+2025-04-30 14:38:44,373 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://www.yahoo.com/entertainment/articles/shannon-sharpe-refuses-view-alleged-154640044.html (13 chars)
+2025-04-30 14:38:44,946 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://www.yahoo.com/lifestyle/illinois-restaurant-owner-regrets-bringing-114000513.html (13 chars)
+2025-04-30 14:38:45,507 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://www.yahoo.com/news/federal-judge-says-local-police-222917272.html (13 chars)
+2025-04-30 14:38:46,133 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://www.yahoo.com/news/two-old-girl-marooned-foster-111211134.html (13 chars)
+2025-04-30 14:38:46,785 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://www.yahoo.com/news/flights-india-europe-north-america-200140266.html (13 chars)
+2025-04-30 14:38:47,363 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://www.yahoo.com/news/analysis-russia-expulsion-ukrainian-forces-143240627.html (13 chars)
+2025-04-30 14:38:48,256 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://tech.yahoo.com/phones/articles/apple-design-20th-anniversary-iphone-112700181.html (13 chars)
+2025-04-30 14:38:48,827 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://www.yahoo.com/news/didnt-look-too-good-because-210020076.html (13 chars)
+2025-04-30 14:38:49,407 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://www.yahoo.com/news/gaza-markets-nearly-bare-palestinian-040113959.html (13 chars)
+2025-04-30 14:38:49,962 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://www.yahoo.com/entertainment/articles/t-stop-thinking-rafe-moving-201604666.html (13 chars)
+2025-04-30 14:38:50,544 - newsgator.feed_processing.feed_processor - WARNING - Very short content extracted from https://www.yahoo.com/news/60-minutes-rattles-viewers-stunning-174136697.html (13 chars)
+2025-04-30 14:38:50,545 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from Yahoo News
+2025-04-30 14:38:52,036 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: TechCrunch (Category: tech)
+2025-04-30 14:39:01,084 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from TechCrunch
+2025-04-30 14:39:01,687 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: Wired (Category: tech)
+2025-04-30 14:39:03,452 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from Wired
+2025-04-30 14:39:04,871 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: The Verge (Category: tech)
+2025-04-30 14:39:05,020 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 10 articles from The Verge
+2025-04-30 14:39:05,785 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: Ars Technica (Category: tech)
+2025-04-30 14:39:05,932 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from Ars Technica
+2025-04-30 14:39:06,468 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: Science Daily (Category: science)
+2025-04-30 14:39:07,589 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from Science Daily
+2025-04-30 14:39:08,672 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: Nature (Category: science)
+2025-04-30 14:39:17,238 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from Nature
+2025-04-30 14:39:18,094 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: NASA (Category: science)
+2025-04-30 14:39:18,334 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 10 articles from NASA
+2025-04-30 14:39:19,615 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: Financial Times (Category: business)
+2025-04-30 14:39:24,404 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 8 articles from Financial Times
+2025-04-30 14:39:25,888 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: The Economist (Category: business)
+2025-04-30 14:39:26,101 - newsgator.feed_processing.feed_processor - WARNING - Feed parsing error for The Economist: document declared as us-ascii, but parsed as utf-8
+2025-04-30 14:39:28,277 - newsgator.feed_processing.feed_processor - WARNING - Feed parsing error for The Economist: document declared as us-ascii, but parsed as utf-8
+2025-04-30 14:39:30,456 - newsgator.feed_processing.feed_processor - WARNING - Feed parsing error for The Economist: document declared as us-ascii, but parsed as utf-8
+2025-04-30 14:39:30,456 - newsgator.feed_processing.feed_processor - WARNING - No articles fetched from The Economist
+2025-04-30 14:39:31,492 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: Wall Street Journal (Category: business)
+2025-04-30 14:39:31,800 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/palestinians-flock-back-to-northern-gaza-on-foot-after-hostage-release-breakthrough-3f60e2db: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/palestinians-flock-back-to-northern-gaza-on-foot-after-hostage-release-breakthrough-3f60e2db
+2025-04-30 14:39:31,872 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/even-chinas-property-stalwart-isnt-immune-from-the-crisis-19799863: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/even-chinas-property-stalwart-isnt-immune-from-the-crisis-19799863
+2025-04-30 14:39:31,963 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/freed-israeli-hostages-still-had-shrapnel-in-their-bodies-from-oct-7-attack-3de8cd1e: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/freed-israeli-hostages-still-had-shrapnel-in-their-bodies-from-oct-7-attack-3de8cd1e
+2025-04-30 14:39:32,032 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/suspected-sabotage-of-deep-sea-cable-triggers-first-nato-led-response-337119ba: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/suspected-sabotage-of-deep-sea-cable-triggers-first-nato-led-response-337119ba
+2025-04-30 14:39:32,101 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/rwanda-backed-rebels-enter-congo-safe-haven-city-aid-hub-09fdccb8: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/rwanda-backed-rebels-enter-congo-safe-haven-city-aid-hub-09fdccb8
+2025-04-30 14:39:32,170 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/cocaine-funded-gangs-shake-colombia-years-after-peace-pact-a45a28da: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/cocaine-funded-gangs-shake-colombia-years-after-peace-pact-a45a28da
+2025-04-30 14:39:32,252 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/italy-supports-saudi-arabia-joining-gcap-fighter-jet-program-pm-meloni-says-bbd9cec1: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/italy-supports-saudi-arabia-joining-gcap-fighter-jet-program-pm-meloni-says-bbd9cec1
+2025-04-30 14:39:32,322 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/shippers-wary-of-red-sea-routes-despite-houthi-pledge-to-end-targeting-4dde35c2: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/shippers-wary-of-red-sea-routes-despite-houthi-pledge-to-end-targeting-4dde35c2
+2025-04-30 14:39:32,392 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/kim-jong-un-is-doing-everything-he-can-to-keep-north-koreas-youth-in-line-0866a1de: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/kim-jong-un-is-doing-everything-he-can-to-keep-north-koreas-youth-in-line-0866a1de
+2025-04-30 14:39:32,461 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/trump-says-colombia-will-face-25-tariffs-amid-fight-over-deportation-flights-e32dc497: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/trump-says-colombia-will-face-25-tariffs-amid-fight-over-deportation-flights-e32dc497
+2025-04-30 14:39:32,551 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/jeju-air-crash-probe-focuses-on-engine-damage-after-bird-strike-3bafc2ff: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/jeju-air-crash-probe-focuses-on-engine-damage-after-bird-strike-3bafc2ff
+2025-04-30 14:39:32,623 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/germany-economic-model-broken-exports-095a488d: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/germany-economic-model-broken-exports-095a488d
+2025-04-30 14:39:32,692 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/trump-says-he-wants-to-clean-out-gaza-send-refugees-to-egypt-and-jordan-d90beccc: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/trump-says-he-wants-to-clean-out-gaza-send-refugees-to-egypt-and-jordan-d90beccc
+2025-04-30 14:39:32,763 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/israel-hamas-four-hostages-release-gaza-3ffd66f6: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/israel-hamas-four-hostages-release-gaza-3ffd66f6
+2025-04-30 14:39:32,879 - newsgator.feed_processing.feed_processor - WARNING - HTTP error 401 for https://www.wsj.com/articles/hamas-hostages-israel-gaza-41432124: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/articles/hamas-hostages-israel-gaza-41432124
+2025-04-30 14:39:32,879 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from Wall Street Journal
+2025-04-30 14:39:33,731 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: ESPN (Category: sports)
+2025-04-30 14:39:40,233 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from ESPN
+2025-04-30 14:39:41,549 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: BBC Sport (Category: sports)
+2025-04-30 14:39:44,131 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 15 articles from BBC Sport
+2025-04-30 14:39:44,943 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: Variety (Category: entertainment)
+2025-04-30 14:39:51,219 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 10 articles from Variety
+2025-04-30 14:39:52,704 - newsgator.feed_processing.feed_processor - INFO - Fetching feed: Hollywood Reporter (Category: entertainment)
+2025-04-30 14:39:53,743 - newsgator.feed_processing.feed_processor - INFO - Successfully fetched 1 articles from Hollywood Reporter
+2025-04-30 14:39:54,444 - newsgator.feed_processing.feed_processor - INFO - Feed processing statistics:
+2025-04-30 14:39:54,445 - newsgator.feed_processing.feed_processor - INFO -   Total feeds: 24
+2025-04-30 14:39:54,445 - newsgator.feed_processing.feed_processor - INFO -   Successful feeds: 21
+2025-04-30 14:39:54,445 - newsgator.feed_processing.feed_processor - INFO -   Failed feeds: 3
+2025-04-30 14:39:54,445 - newsgator.feed_processing.feed_processor - INFO -   Articles fetched: 274
+2025-04-30 14:39:54,445 - newsgator.feed_processing.feed_processor - INFO -   Articles skipped: 380
+2025-04-30 14:39:54,445 - newsgator.feed_processing.feed_processor - INFO -   Timeout errors: 0
+2025-04-30 14:39:54,445 - newsgator.feed_processing.feed_processor - INFO -   Connection errors: 0
+2025-04-30 14:39:54,445 - newsgator.feed_processing.feed_processor - INFO -   Parse errors: 3
+2025-04-30 14:39:54,445 - newsgator.feed_processing.feed_processor - INFO -   Other errors: 0
+2025-04-30 14:39:54,445 - newsgator - INFO - Fetched 274 articles
+2025-04-30 14:39:54,445 - newsgator - INFO - Analyzing and clustering articles
+2025-04-30 14:39:54,499 - newsgator.content_analysis.content_analyzer - ERROR - Error clustering articles: Negative values in data passed to X.
+2025-04-30 14:39:54,499 - newsgator - INFO - Created 274 article clusters
+2025-04-30 14:39:54,499 - newsgator - INFO - Extracting topics for clusters
+2025-04-30 14:39:54,499 - newsgator - INFO - Processing articles with LLM (translation and rewriting)
