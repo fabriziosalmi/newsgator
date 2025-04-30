@@ -47,7 +47,7 @@
                         
                         {% if main_article.image_path %}
                         <div class="article-image">
-                            <img src="{{ main_article.image_path }}" alt="{{ main_article.image_caption }}">
+                            <img src="{{ main_article.image_path }}" alt="{{ main_article.image_caption }}" loading="lazy">
                             <div class="image-caption">{{ main_article.image_caption }}</div>
                         </div>
                         {% endif %}
@@ -99,6 +99,15 @@
                                 <a href="{{ article.url }}" target="_blank" rel="noopener">{{ article.source }}</a>
                                 {% else %}
                                 {{ article.source }}
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                            
+                            {% if article.image_path %}
+                            <div class="article-image">
+                                <img src="{{ article.image_path }}" alt="{{ article.image_caption|default('Article image') }}" loading="lazy">
+                                {% if article.image_caption %}
+                                <div class="image-caption">{{ article.image_caption }}</div>
                                 {% endif %}
                             </div>
                             {% endif %}
@@ -235,6 +244,16 @@
                     }
                 });
             });
+            
+            // Handle dynamic resizing for better mobile experience
+            function handleResize() {
+                document.body.classList.toggle('narrow', window.innerWidth < 768);
+                document.body.classList.toggle('mobile', window.innerWidth < 480);
+            }
+            
+            // Set initial state and watch for resize
+            handleResize();
+            window.addEventListener('resize', handleResize);
         });
     </script>
 </body>

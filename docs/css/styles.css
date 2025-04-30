@@ -47,11 +47,13 @@ a:hover {
 /* Main content layout with sidebar */
 .newspaper-content {
     display: flex;
+    flex-wrap: wrap; /* Added flex-wrap for better responsiveness */
     gap: 30px;
 }
 
 main {
     flex: 3;
+    min-width: 300px; /* Added minimum width for better small screen handling */
 }
 
 /* Sidebar styles - Enhanced for better visual distinction */
@@ -500,9 +502,17 @@ footer {
     
     .sidebar {
         max-width: none;
+        width: 100%;
         border-left: none;
+        margin-left: 0;
         border-top: 1px solid var(--border-color);
         margin-top: 30px;
+        box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.05); /* Adjusted shadow for new position */
+    }
+
+    .page-selector {
+        margin: 0 auto 28px;
+        max-width: 90%;
     }
 }
 
@@ -525,7 +535,8 @@ footer {
     
     .pagination-info {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
+        align-items: center;
     }
     
     .section-title {
@@ -543,6 +554,12 @@ footer {
     
     .no-image-placeholder {
         height: 200px;
+    }
+
+    /* Improve page navigation on smaller screens */
+    .page-list {
+        gap: 8px;
+        margin: 10px 0;
     }
 }
 
@@ -575,7 +592,7 @@ footer {
     .article-content {
         font-size: 15px;
     }
-    
+
     .pagination-nav {
         flex-direction: column;
         gap: 10px;
@@ -585,5 +602,36 @@ footer {
     .pagination-link {
         display: block;
         text-align: center;
+    }
+
+    /* Better spacing for sidebar elements on mobile */
+    .sidebar-section {
+        margin-bottom: 20px;
+        padding: 12px;
+    }
+
+    .sidebar-article-links li {
+        padding-left: 14px;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 360px) {
+    .newspaper {
+        padding: 10px;
+    }
+    
+    .newspaper-name {
+        font-size: 28px;
+        letter-spacing: normal;
+    }
+    
+    body {
+        padding: 10px;
+    }
+    
+    .page-list li a {
+        padding: 4px 8px;
+        font-size: 13px;
     }
 }

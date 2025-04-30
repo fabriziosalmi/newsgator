@@ -1548,3 +1548,667 @@ LLM PROCESSING STATS:
   content_truncated: 0
 ==================================================
 Newsgator workflow completed successfully. Output generated in /Users/fab/GitHub/newsgator/docs
+LM Studio max context length: 32768
+Using LM Studio with model: phi-4-mini-instruct
+LM Studio base URL: http://localhost:1234/v1
+Max tokens setting: 8000
+LLM response caching enabled. Cache directory: /Users/fab/GitHub/newsgator/docs/.cache/llm_responses
+HTML Generator initialized with output directory: /Users/fab/GitHub/newsgator/docs
+Starting Newsgator workflow
+Fetching RSS feeds
+Starting to fetch 5 feeds
+Fetching feed: ANSA (Category: news)
+Successfully fetched 3 articles from ANSA
+Fetching feed: Corriere della Sera (Category: news)
+Successfully fetched 3 articles from Corriere della Sera
+Fetching feed: La Repubblica (Category: news)
+Successfully fetched 3 articles from La Repubblica
+Fetching feed: Il Sole 24 Ore (Category: news)
+Successfully fetched 3 articles from Il Sole 24 Ore
+Fetching feed: La Stampa (Category: news)
+Successfully fetched 3 articles from La Stampa
+Feed processing statistics:
+  Total feeds: 5
+  Successful feeds: 5
+  Failed feeds: 0
+  Articles fetched: 15
+  Articles skipped: 151
+  Timeout errors: 0
+  Connection errors: 0
+  Parse errors: 0
+  Other errors: 0
+Fetched 15 articles
+Analyzing and clustering articles
+Created 15 article clusters
+Extracting topics for clusters
+Processing articles with LLM (translation and rewriting)
+Starting to process 15 topics with 15 primary articles
+Using lmstudio as LLM provider with phi-4-mini-instruct
+
+----------------------------------------
+Topic 1/15: Usa 'pronti a firmare oggi accordo con Kiev su minerali'
+----------------------------------------
+Processing article 1 of 15 (6.7%): Usa 'pronti a firmare oggi accordo con Kiev su min...
+Content length (328 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 2/15: Trump, 'Carney a breve alla Casa Bianca'
+----------------------------------------
+Processing article 2 of 15 (13.3%): Trump, 'Carney a breve alla Casa Bianca'...
+Content length (293 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Translating topic: Trump, 'Carney a breve alla Casa Bianca'
+Error translating text: 'cache_misses'
+Topic translated: Trump, 'Carney a breve alla Casa Bianca'
+
+----------------------------------------
+Topic 3/15: Bbc, bozza intesa non specifica garanzie di sicurezza a Kiev
+----------------------------------------
+Processing article 3 of 15 (20.0%): Bbc, bozza intesa non specifica garanzie di sicure...
+Content length (755 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 4/15: Codice della strada, ecco cosa cambia e perché non ridurrà il numero delle vittime
+----------------------------------------
+Processing article 4 of 15 (26.7%): Codice della strada, ecco cosa cambia e perché non...
+Content length (2921 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 5/15: Toti a Spinelli: «Ti vengo a trovare prima delle elezioni. Ti chiedo un po’ di robe» Ecco le imma...
+----------------------------------------
+Processing article 5 of 15 (33.3%): Toti a Spinelli: «Ti vengo a trovare prima delle e...
+Content length (870 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 6/15: IL SINDACO DI GENOVA Lo sfogo di Bucci: «Gioco  al massacro, non ci sto. Chiedo chiarezza, pronto...
+----------------------------------------
+Processing article 6 of 15 (40.0%): IL SINDACO DI GENOVA Lo sfogo di Bucci: «Gioco  al...
+Content length (823 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 7/15: Guerra Ucraina - Russia, le news. Putin: “Ci sono francesi che combattono con noi”
+----------------------------------------
+Processing article 7 of 15 (46.7%): Guerra Ucraina - Russia, le news. Putin: “Ci sono ...
+Content length (2905 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.01 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 8/15: Borse e dazi, le news di oggi. Il Pil americano manda ko Wall Street e Piazza Affari
+----------------------------------------
+Processing article 8 of 15 (53.3%): Borse e dazi, le news di oggi. Il Pil americano ma...
+Content length (2987 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 9/15: Stage già a 15 anni, le opposizioni contro il decreto Pnrr-Scuola: “Troppo giovani, è rischioso”
+----------------------------------------
+Processing article 9 of 15 (60.0%): Stage già a 15 anni, le opposizioni contro il decr...
+Content length (2018 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 10/15: Calo demografico, neanche 2,1 figli a donna bastano a salvarci dall’estinzione
+----------------------------------------
+Processing article 10 of 15 (66.7%): Calo demografico, neanche 2,1 figli a donna bastan...
+Content length (2913 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Translating topic: Calo demografico, neanche 2,1 figli a donna bastano a salvarci dall’estinzione
+Error translating text: 'cache_misses'
+Topic translated: Calo demografico, neanche 2,1 figli a donna bastano a salvarci dall’estinzione
+
+----------------------------------------
+Topic 11/15: Cda de Il Sole 24 Ore Spa:  Silvestri nominato amministratore delegato, Colaiacovo presidente
+----------------------------------------
+Processing article 11 of 15 (73.3%): Cda de Il Sole 24 Ore Spa:  Silvestri nominato amm...
+Content length (2829 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.01 seconds
+Translating topic: Cda de Il Sole 24 Ore Spa:  Silvestri nominato amministratore delegato, Colaiacovo presidente
+Error translating text: 'cache_misses'
+Topic translated: Cda de Il Sole 24 Ore Spa:  Silvestri nominato amministratore delegato, Colaiacovo presidente
+
+----------------------------------------
+Topic 12/15: Il profilo di Federico Silvestri
+----------------------------------------
+Processing article 12 of 15 (80.0%): Il profilo di Federico Silvestri...
+Content length (2324 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.01 seconds
+Translating topic: Il profilo di Federico Silvestri
+Error translating text: 'cache_misses'
+Topic translated: Il profilo di Federico Silvestri
+
+----------------------------------------
+Topic 13/15: Il centro non basta più
+----------------------------------------
+Processing article 13 of 15 (86.7%): Il centro non basta più...
+Content length (1326 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 14/15: Meloni all’estero col vestito nuovo
+----------------------------------------
+Processing article 14 of 15 (93.3%): Meloni all’estero col vestito nuovo...
+Content length (2988 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Translating topic: Meloni all’estero col vestito nuovo
+Error translating text: 'cache_misses'
+Topic translated: Meloni all’estero col vestito nuovo
+
+----------------------------------------
+Topic 15/15: La fobia dello straniero nell’Italia che muore
+----------------------------------------
+Processing article 15 of 15 (100.0%): La fobia dello straniero nell’Italia che muore...
+Content length (2898 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Processing Summary
+----------------------------------------
+Completed processing 15 articles across 15 topics
+Content already in Italian (skipped translation): 25
+Failed articles: 0
+Total processing time: 0.06 seconds
+Average time per article: 0.00 seconds
+Image generation is disabled or not available
+Generating HTML output and RSS feed
+Selected main article: 'Meloni all’estero col vestito nuovo' with 2988 characters
+Converting topic clusters to HTML sections
+Generating multi-page content with 5 sections per page
+Creating 3 pages with main article featured on first page
+Generated first page with main article feature
+Generated page 2/3: page2.html
+Generated page 3/3: page3.html
+Generating RSS feed
+RSS feed written to /Users/fab/GitHub/newsgator/docs/feed.xml
+
+==================================================
+NEWSGATOR RUN SUMMARY
+==================================================
+Total articles fetched: 15
+Number of clusters: 15
+Number of topics: 15
+Number of articles in final output: 15
+
+LLM PROCESSING STATS:
+  articles_processed: 15
+  articles_failed: 0
+  total_processing_time: 0.06
+  avg_processing_time: 0.00
+  italian_skipped: 25
+  titles_deduplicated: 0
+  content_truncated: 0
+==================================================
+Newsgator workflow completed successfully. Output generated in /Users/fab/GitHub/newsgator/docs
+LM Studio max context length: 32768
+Using LM Studio with model: phi-4-mini-instruct
+LM Studio base URL: http://localhost:1234/v1
+Max tokens setting: 8000
+LLM response caching enabled. Cache directory: /Users/fab/GitHub/newsgator/docs/.cache/llm_responses
+HTML Generator initialized with output directory: /Users/fab/GitHub/newsgator/docs
+Starting Newsgator workflow
+Fetching RSS feeds
+Starting to fetch 5 feeds
+Fetching feed: ANSA (Category: news)
+Successfully fetched 3 articles from ANSA
+Fetching feed: Corriere della Sera (Category: news)
+Successfully fetched 3 articles from Corriere della Sera
+Fetching feed: La Repubblica (Category: news)
+Successfully fetched 3 articles from La Repubblica
+Fetching feed: Il Sole 24 Ore (Category: news)
+Successfully fetched 3 articles from Il Sole 24 Ore
+Fetching feed: La Stampa (Category: news)
+Successfully fetched 3 articles from La Stampa
+Feed processing statistics:
+  Total feeds: 5
+  Successful feeds: 5
+  Failed feeds: 0
+  Articles fetched: 15
+  Articles skipped: 151
+  Timeout errors: 0
+  Connection errors: 0
+  Parse errors: 0
+  Other errors: 0
+Fetched 15 articles
+Analyzing and clustering articles
+Created 15 article clusters
+Extracting topics for clusters
+Processing articles with LLM (translation and rewriting)
+Starting to process 15 topics with 15 primary articles
+Using lmstudio as LLM provider with phi-4-mini-instruct
+
+----------------------------------------
+Topic 1/15: Ankara, 'Israele fermi i raid aerei sulla Siria'
+----------------------------------------
+Processing article 1 of 15 (6.7%): Ankara, 'Israele fermi i raid aerei sulla Siria'...
+Content length (521 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Translating topic: Ankara, 'Israele fermi i raid aerei sulla Siria'
+Error translating text: 'cache_misses'
+Topic translated: Ankara, 'Israele fermi i raid aerei sulla Siria'
+
+----------------------------------------
+Topic 2/15: Usa 'pronti a firmare oggi accordo con Kiev su minerali'
+----------------------------------------
+Processing article 2 of 15 (13.3%): Usa 'pronti a firmare oggi accordo con Kiev su min...
+Content length (328 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 3/15: Trump, 'Carney a breve alla Casa Bianca'
+----------------------------------------
+Processing article 3 of 15 (20.0%): Trump, 'Carney a breve alla Casa Bianca'...
+Content length (293 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Translating topic: Trump, 'Carney a breve alla Casa Bianca'
+Error translating text: 'cache_misses'
+Topic translated: Trump, 'Carney a breve alla Casa Bianca'
+
+----------------------------------------
+Topic 4/15: Codice della strada, ecco cosa cambia e perché non ridurrà il numero delle vittime
+----------------------------------------
+Processing article 4 of 15 (26.7%): Codice della strada, ecco cosa cambia e perché non...
+Content length (2921 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 5/15: Toti a Spinelli: «Ti vengo a trovare prima delle elezioni. Ti chiedo un po’ di robe» Ecco le imma...
+----------------------------------------
+Processing article 5 of 15 (33.3%): Toti a Spinelli: «Ti vengo a trovare prima delle e...
+Content length (870 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 6/15: IL SINDACO DI GENOVA Lo sfogo di Bucci: «Gioco  al massacro, non ci sto. Chiedo chiarezza, pronto...
+----------------------------------------
+Processing article 6 of 15 (40.0%): IL SINDACO DI GENOVA Lo sfogo di Bucci: «Gioco  al...
+Content length (823 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 7/15: Guerra Ucraina - Russia, le news. Putin: “Ci sono francesi che combattono con noi”
+----------------------------------------
+Processing article 7 of 15 (46.7%): Guerra Ucraina - Russia, le news. Putin: “Ci sono ...
+Content length (2981 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.01 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 8/15: Stage già a 15 anni, le opposizioni contro il decreto Pnrr-Scuola: “Troppo giovani, è rischioso”
+----------------------------------------
+Processing article 8 of 15 (53.3%): Stage già a 15 anni, le opposizioni contro il decr...
+Content length (2018 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 9/15: Studente aggredisce due insegnanti e ne manda uno in ospedale
+----------------------------------------
+Processing article 9 of 15 (60.0%): Studente aggredisce due insegnanti e ne manda uno ...
+Content length (827 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 10/15: Calo demografico, neanche 2,1 figli a donna bastano a salvarci dall’estinzione
+----------------------------------------
+Processing article 10 of 15 (66.7%): Calo demografico, neanche 2,1 figli a donna bastan...
+Content length (2913 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Translating topic: Calo demografico, neanche 2,1 figli a donna bastano a salvarci dall’estinzione
+Error translating text: 'cache_misses'
+Topic translated: Calo demografico, neanche 2,1 figli a donna bastano a salvarci dall’estinzione
+
+----------------------------------------
+Topic 11/15: Cda de Il Sole 24 Ore Spa:  Silvestri nominato amministratore delegato, Colaiacovo presidente
+----------------------------------------
+Processing article 11 of 15 (73.3%): Cda de Il Sole 24 Ore Spa:  Silvestri nominato amm...
+Content length (2829 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.01 seconds
+Translating topic: Cda de Il Sole 24 Ore Spa:  Silvestri nominato amministratore delegato, Colaiacovo presidente
+Error translating text: 'cache_misses'
+Topic translated: Cda de Il Sole 24 Ore Spa:  Silvestri nominato amministratore delegato, Colaiacovo presidente
+
+----------------------------------------
+Topic 12/15: Il profilo di Federico Silvestri
+----------------------------------------
+Processing article 12 of 15 (80.0%): Il profilo di Federico Silvestri...
+Content length (2324 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Translating topic: Il profilo di Federico Silvestri
+Error translating text: 'cache_misses'
+Topic translated: Il profilo di Federico Silvestri
+
+----------------------------------------
+Topic 13/15: Il centro non basta più
+----------------------------------------
+Processing article 13 of 15 (86.7%): Il centro non basta più...
+Content length (2969 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.01 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 14/15: Meloni all’estero col vestito nuovo
+----------------------------------------
+Processing article 14 of 15 (93.3%): Meloni all’estero col vestito nuovo...
+Content length (2988 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Translating topic: Meloni all’estero col vestito nuovo
+Error translating text: 'cache_misses'
+Topic translated: Meloni all’estero col vestito nuovo
+
+----------------------------------------
+Topic 15/15: La fobia dello straniero nell’Italia che muore
+----------------------------------------
+Processing article 15 of 15 (100.0%): La fobia dello straniero nell’Italia che muore...
+Content length (2898 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.01 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Processing Summary
+----------------------------------------
+Completed processing 15 articles across 15 topics
+Content already in Italian (skipped translation): 24
+Failed articles: 0
+Total processing time: 0.06 seconds
+Average time per article: 0.00 seconds
+Image generation is disabled or not available
+Generating HTML output and RSS feed
+Selected main article: 'Meloni all’estero col vestito nuovo' with 2988 characters
+Converting topic clusters to HTML sections
+Generating multi-page content with 5 sections per page
+Creating 3 pages with main article featured on first page
+Generated first page with main article feature
+Generated page 2/3: page2.html
+Generated page 3/3: page3.html
+Generating RSS feed
+RSS feed written to /Users/fab/GitHub/newsgator/docs/feed.xml
+
+==================================================
+NEWSGATOR RUN SUMMARY
+==================================================
+Total articles fetched: 15
+Number of clusters: 15
+Number of topics: 15
+Number of articles in final output: 15
+
+LLM PROCESSING STATS:
+  articles_processed: 15
+  articles_failed: 0
+  total_processing_time: 0.06
+  avg_processing_time: 0.00
+  italian_skipped: 24
+  titles_deduplicated: 0
+  content_truncated: 0
+==================================================
+Newsgator workflow completed successfully. Output generated in /Users/fab/GitHub/newsgator/docs
+LM Studio max context length: 32768
+Using LM Studio with model: phi-4-mini-instruct
+LM Studio base URL: http://localhost:1234/v1
+Max tokens setting: 8000
+LLM response caching enabled. Cache directory: /Users/fab/GitHub/newsgator/docs/.cache/llm_responses
+HTML Generator initialized with output directory: /Users/fab/GitHub/newsgator/docs
+Starting Newsgator workflow
+Fetching RSS feeds
+Starting to fetch 5 feeds
+Fetching feed: ANSA (Category: news)
+Successfully fetched 3 articles from ANSA
+Fetching feed: Corriere della Sera (Category: news)
+Successfully fetched 3 articles from Corriere della Sera
+Fetching feed: La Repubblica (Category: news)
+Successfully fetched 3 articles from La Repubblica
+Fetching feed: Il Sole 24 Ore (Category: news)
+Successfully fetched 3 articles from Il Sole 24 Ore
+Fetching feed: La Stampa (Category: news)
+Successfully fetched 3 articles from La Stampa
+Feed processing statistics:
+  Total feeds: 5
+  Successful feeds: 5
+  Failed feeds: 0
+  Articles fetched: 15
+  Articles skipped: 151
+  Timeout errors: 0
+  Connection errors: 0
+  Parse errors: 0
+  Other errors: 0
+Fetched 15 articles
+Analyzing and clustering articles
+Created 15 article clusters
+Extracting topics for clusters
+Processing articles with LLM (translation and rewriting)
+Starting to process 15 topics with 15 primary articles
+Using lmstudio as LLM provider with phi-4-mini-instruct
+
+----------------------------------------
+Topic 1/15: Ankara, 'Israele fermi i raid aerei sulla Siria'
+----------------------------------------
+Processing article 1 of 15 (6.7%): Ankara, 'Israele fermi i raid aerei sulla Siria'...
+Content length (521 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Translating topic: Ankara, 'Israele fermi i raid aerei sulla Siria'
+Error translating text: 'cache_misses'
+Topic translated: Ankara, 'Israele fermi i raid aerei sulla Siria'
+
+----------------------------------------
+Topic 2/15: Usa 'pronti a firmare oggi accordo con Kiev su minerali'
+----------------------------------------
+Processing article 2 of 15 (13.3%): Usa 'pronti a firmare oggi accordo con Kiev su min...
+Content length (328 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 3/15: Trump, 'Carney a breve alla Casa Bianca'
+----------------------------------------
+Processing article 3 of 15 (20.0%): Trump, 'Carney a breve alla Casa Bianca'...
+Content length (293 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Translating topic: Trump, 'Carney a breve alla Casa Bianca'
+Error translating text: 'cache_misses'
+Topic translated: Trump, 'Carney a breve alla Casa Bianca'
+
+----------------------------------------
+Topic 4/15: Codice della strada, ecco cosa cambia e perché non ridurrà il numero delle vittime
+----------------------------------------
+Processing article 4 of 15 (26.7%): Codice della strada, ecco cosa cambia e perché non...
+Content length (2921 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 5/15: Toti a Spinelli: «Ti vengo a trovare prima delle elezioni. Ti chiedo un po’ di robe» Ecco le imma...
+----------------------------------------
+Processing article 5 of 15 (33.3%): Toti a Spinelli: «Ti vengo a trovare prima delle e...
+Content length (870 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 6/15: IL SINDACO DI GENOVA Lo sfogo di Bucci: «Gioco  al massacro, non ci sto. Chiedo chiarezza, pronto...
+----------------------------------------
+Processing article 6 of 15 (40.0%): IL SINDACO DI GENOVA Lo sfogo di Bucci: «Gioco  al...
+Content length (823 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 7/15: Guerra Ucraina - Russia, le news. Putin: “Ci sono francesi che combattono con noi”
+----------------------------------------
+Processing article 7 of 15 (46.7%): Guerra Ucraina - Russia, le news. Putin: “Ci sono ...
+Content length (2981 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.01 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 8/15: Stage già a 15 anni, le opposizioni contro il decreto Pnrr-Scuola: “Troppo giovani, è rischioso”
+----------------------------------------
+Processing article 8 of 15 (53.3%): Stage già a 15 anni, le opposizioni contro il decr...
+Content length (2018 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.01 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 9/15: Studente aggredisce due insegnanti e ne manda uno in ospedale
+----------------------------------------
+Processing article 9 of 15 (60.0%): Studente aggredisce due insegnanti e ne manda uno ...
+Content length (827 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 10/15: Calo demografico, neanche 2,1 figli a donna bastano a salvarci dall’estinzione
+----------------------------------------
+Processing article 10 of 15 (66.7%): Calo demografico, neanche 2,1 figli a donna bastan...
+Content length (2913 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Translating topic: Calo demografico, neanche 2,1 figli a donna bastano a salvarci dall’estinzione
+Error translating text: 'cache_misses'
+Topic translated: Calo demografico, neanche 2,1 figli a donna bastano a salvarci dall’estinzione
+
+----------------------------------------
+Topic 11/15: Cda de Il Sole 24 Ore Spa:  Silvestri nominato amministratore delegato, Colaiacovo presidente
+----------------------------------------
+Processing article 11 of 15 (73.3%): Cda de Il Sole 24 Ore Spa:  Silvestri nominato amm...
+Content length (2829 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.01 seconds
+Translating topic: Cda de Il Sole 24 Ore Spa:  Silvestri nominato amministratore delegato, Colaiacovo presidente
+Error translating text: 'cache_misses'
+Topic translated: Cda de Il Sole 24 Ore Spa:  Silvestri nominato amministratore delegato, Colaiacovo presidente
+
+----------------------------------------
+Topic 12/15: Il profilo di Federico Silvestri
+----------------------------------------
+Processing article 12 of 15 (80.0%): Il profilo di Federico Silvestri...
+Content length (2324 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Translating topic: Il profilo di Federico Silvestri
+Error translating text: 'cache_misses'
+Topic translated: Il profilo di Federico Silvestri
+
+----------------------------------------
+Topic 13/15: Il centro non basta più
+----------------------------------------
+Processing article 13 of 15 (86.7%): Il centro non basta più...
+Content length (1326 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Topic 14/15: Meloni all’estero col vestito nuovo
+----------------------------------------
+Processing article 14 of 15 (93.3%): Meloni all’estero col vestito nuovo...
+Content length (2988 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Translating topic: Meloni all’estero col vestito nuovo
+Error translating text: 'cache_misses'
+Topic translated: Meloni all’estero col vestito nuovo
+
+----------------------------------------
+Topic 15/15: La fobia dello straniero nell’Italia che muore
+----------------------------------------
+Processing article 15 of 15 (100.0%): La fobia dello straniero nell’Italia che muore...
+Content length (1326 chars) fits within LM Studio context window
+Content is already in Italian, skipping translation.
+Article processed in 0.00 seconds
+Topic is already in Italian, skipping translation.
+
+----------------------------------------
+Processing Summary
+----------------------------------------
+Completed processing 15 articles across 15 topics
+Content already in Italian (skipped translation): 24
+Failed articles: 0
+Total processing time: 0.06 seconds
+Average time per article: 0.00 seconds
+Image generation is disabled or not available
+Generating HTML output and RSS feed
+Selected main article: 'Meloni all’estero col vestito nuovo' with 2988 characters
+Converting topic clusters to HTML sections
+Generating multi-page content with 5 sections per page
+Creating 3 pages with main article featured on first page
+Generated first page with main article feature
+Generated page 2/3: page2.html
+Generated page 3/3: page3.html
+Generating RSS feed
+RSS feed written to /Users/fab/GitHub/newsgator/docs/feed.xml
+
+==================================================
+NEWSGATOR RUN SUMMARY
+==================================================
+Total articles fetched: 15
+Number of clusters: 15
+Number of topics: 15
+Number of articles in final output: 15
+
+LLM PROCESSING STATS:
+  articles_processed: 15
+  articles_failed: 0
+  total_processing_time: 0.06
+  avg_processing_time: 0.00
+  italian_skipped: 24
+  titles_deduplicated: 0
+  content_truncated: 0
+==================================================
+Newsgator workflow completed successfully. Output generated in /Users/fab/GitHub/newsgator/docs
