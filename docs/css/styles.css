@@ -1,0 +1,135 @@
+/* Newspaper-inspired styles */
+:root {
+    --newspaper-bg: #f8f7f2;
+    --text-color: #222;
+    --header-color: #111;
+    --border-color: #ddd;
+    --accent-color: #8b0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Serif Pro', 'Times New Roman', serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+
+.newspaper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--newspaper-bg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border: 1px solid var(--border-color);
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.newspaper-name {
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    font-size: 60px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    color: var(--header-color);
+}
+
+.newspaper-info {
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Section styles */
+.news-section {
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 30px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    border-bottom: 1px solid var(--accent-color);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+}
+
+/* Article styles */
+.news-article {
+    margin-bottom: 30px;
+    column-count: 1;
+}
+
+.lead-article {
+    column-count: 2;
+    column-gap: 30px;
+}
+
+.article-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.lead-article .article-title {
+    font-size: 32px;
+    column-span: all;
+}
+
+.article-source {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.article-content {
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.article-content p {
+    margin-bottom: 15px;
+    text-indent: 1em;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    padding-top: 20px;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+    .newspaper {
+        padding: 20px;
+    }
+    
+    .newspaper-name {
+        font-size: 40px;
+    }
+    
+    .lead-article {
+        column-count: 1;
+    }
+}
