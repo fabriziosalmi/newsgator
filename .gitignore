@@ -1,3 +1,6 @@
 venv/
 __pycache__/
 *.py[cod]
+.DS_Store
+src/newsgator/config.py
+newsgator.log

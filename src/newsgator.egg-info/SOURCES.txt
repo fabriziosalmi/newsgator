@@ -15,5 +15,6 @@ src/newsgator/feed_processing/feed_processor.py
 src/newsgator/html_generation/__init__.py
 src/newsgator/html_generation/html_generator.py
 src/newsgator/llm_integration/__init__.py
+src/newsgator/llm_integration/image_generator.py
 src/newsgator/llm_integration/llm_processor.py
 src/newsgator/web_server/__init__.py

@@ -196,8 +196,18 @@ class FeedProcessor:
         socket.setdefaulttimeout(self.timeout)
         
         try:
-            # Parse the feed
-            feed_data = feedparser.parse(feed_url)
+            # Check if it's a feed with known encoding issues
+            if ("corriereobjects.it" in feed_url or "corriere.it" in feed_url or 
+                "ilsole24ore.com" in feed_url or "ilsole24ore" in feed_url):
+                logger.debug(f"Using explicit UTF-8 handling for feed with encoding issues: {feed_url}")
+                # Fetch the feed content manually with requests and force UTF-8 encoding
+                response = requests.get(feed_url, timeout=self.timeout)
+                response.encoding = 'utf-8'  # Force UTF-8 encoding
+                feed_data = feedparser.parse(response.text)
+            else:
+                # Regular parsing for other feeds
+                feed_data = feedparser.parse(feed_url)
+            
             return feed_data
         except Exception as e:
             logger.error(f"Error in feedparser with URL {feed_url}: {str(e)}")

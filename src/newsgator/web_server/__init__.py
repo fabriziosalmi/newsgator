@@ -11,7 +11,13 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 from functools import partial
 from pathlib import Path
 
+from rich.console import Console
+from rich.logging import RichHandler
+
 from newsgator.config import DOCS_DIR, WEB_SERVER_PORT
+
+# Initialize Rich console for the web server
+console = Console()
 
 logger = logging.getLogger(__name__)
 
@@ -30,7 +36,26 @@ class DocsDirectoryHandler(SimpleHTTPRequestHandler):
         # Replace the current directory with the docs directory
         rel_path = os.path.relpath(path, os.getcwd())
         return os.path.join(self.docs_directory, rel_path)
-
+    
+    def log_message(self, format, *args):
+        """Override the default log_message method to use Rich logging."""
+        status_code = args[1]
+        path = args[0].split()[1]
+        
+        # Color-code status codes
+        if status_code.startswith('2'):  # 2xx Success
+            status_style = "[bold green]"
+        elif status_code.startswith('3'):  # 3xx Redirection
+            status_style = "[bold blue]"
+        elif status_code.startswith('4'):  # 4xx Client Error
+            status_style = "[bold yellow]"
+        elif status_code.startswith('5'):  # 5xx Server Error
+            status_style = "[bold red]"
+        else:
+            status_style = "[bold]"
+        
+        # Log with rich formatting
+        console.log(f"[cyan]{self.client_address[0]}[/cyan] - {path} - {status_style}{status_code}[/]")
 
 def run_server(docs_directory=None, port=None):
     """
@@ -64,12 +89,13 @@ def run_server(docs_directory=None, port=None):
 
 
 if __name__ == "__main__":
-    # Setup logging
+    # Setup logging with Rich
     logging.basicConfig(
         level=logging.INFO,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        format="%(message)s",
+        datefmt="[%X]",
         handlers=[
-            logging.StreamHandler(sys.stdout)
+            RichHandler(rich_tracebacks=True, console=console, show_time=True, show_path=False)
         ]
     )
     

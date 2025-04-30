@@ -12,16 +12,23 @@ import sys
 import time
 import threading
 
+from rich.console import Console
+from rich.logging import RichHandler
+
 from newsgator import Newsgator
 from newsgator.web_server import run_server
 from newsgator.config import DOCS_DIR
 
-# Setup logging
+# Initialize Rich console
+console = Console()
+
+# Setup logging with Rich
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    format="%(message)s",
+    datefmt="[%X]",
     handlers=[
-        logging.StreamHandler(sys.stdout)
+        RichHandler(rich_tracebacks=True, console=console, show_time=True, show_path=False)
     ]
 )
 

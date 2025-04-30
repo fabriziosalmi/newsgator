@@ -6,6 +6,9 @@
     <title>{{ title }}</title>
     <meta name="description" content="{{ description }}">
     <meta name="author" content="{{ author }}">
+    {% if is_multi_page %}
+    <meta name="current-page" content="{{ current_page }}">
+    {% endif %}
     <link rel="stylesheet" href="css/styles.css">
     <!-- Add web fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+Pro:wght@400;700&display=swap">
@@ -20,29 +23,219 @@
             </div>
         </header>
         
-        <main>
-            {% for section in sections %}
-            <section class="news-section">
-                <h2 class="section-title">{{ section.title }}</h2>
+        <div class="newspaper-content">
+            <!-- Main content area -->
+            <main>
+                {% if is_first_page and main_article %}
+                <!-- Main featured article -->
+                <section class="main-article-section" id="main-article">
+                    <!-- Display topic/category as section header -->
+                    <h2 class="section-title">{{ main_article_topic }}</h2>
+                    <article class="main-article">
+                        <!-- Main article title - displayed only once as part of the article -->
+                        <h3 class="article-title">{{ main_article.title }}</h3>
+                        
+                        {% if main_article.source %}
+                        <div class="article-source">
+                            {% if main_article.url %}
+                            <a href="{{ main_article.url }}" target="_blank" rel="noopener">{{ main_article.source }}</a>
+                            {% else %}
+                            {{ main_article.source }}
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                        
+                        {% if main_article.image_path %}
+                        <div class="article-image">
+                            <img src="{{ main_article.image_path }}" alt="{{ main_article.image_caption }}">
+                            <div class="image-caption">{{ main_article.image_caption }}</div>
+                        </div>
+                        {% endif %}
+                        
+                        <div class="article-content">
+                            {% if main_article.pull_quote %}
+                            <blockquote class="pull-quote">{{ main_article.pull_quote }}</blockquote>
+                            {% endif %}
+                            
+                            {{ main_article.content | safe }}
+                        </div>
+                        
+                        {% if main_article.sources and main_article.sources|length > 0 %}
+                        <div class="article-attribution">
+                            <p class="sources-title">Fonti:</p>
+                            <ul class="sources-list">
+                                {% for source in main_article.sources %}
+                                <li>
+                                    {% if source.url %}
+                                    <a href="{{ source.url }}" target="_blank" rel="noopener">{{ source.name }}</a>
+                                    {% else %}
+                                    {{ source.name }}
+                                    {% endif %}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                    </article>
+                </section>
+                {% endif %}
                 
-                {% for article in section.articles %}
-                <article class="news-article {% if loop.first %}lead-article{% endif %}">
-                    <h3 class="article-title">{{ article.title }}</h3>
-                    {% if article.source %}
-                    <div class="article-source">{{ article.source }}</div>
-                    {% endif %}
-                    <div class="article-content">
-                        {{ article.content | safe }}
+                <!-- Regular article sections -->
+                {% for section in sections %}
+                <section class="news-section" id="{{ section.id }}">
+                    <!-- Display section/category title as the header -->
+                    <h2 class="section-title">{{ section.title }}</h2>
+                    
+                    <div class="section-articles">
+                        {% for article in section.articles %}
+                        {% if not (is_first_page and section.is_featured and loop.first) %}
+                        <article class="news-article {% if loop.first %}lead-article{% endif %}" id="{{ article.id }}">
+                            <!-- Article title - only displayed here for individual article, not duplicated in section header -->
+                            <h3 class="article-title">{{ article.title }}</h3>
+                            
+                            {% if article.source %}
+                            <div class="article-source">
+                                {% if article.url %}
+                                <a href="{{ article.url }}" target="_blank" rel="noopener">{{ article.source }}</a>
+                                {% else %}
+                                {{ article.source }}
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                            
+                            <div class="article-content">
+                                {{ article.content | safe }}
+                            </div>
+                            
+                            {% if article.sources and article.sources|length > 0 %}
+                            <div class="article-attribution">
+                                <p class="sources-title">Fonti:</p>
+                                <ul class="sources-list">
+                                    {% for source in article.sources %}
+                                    <li>
+                                        {% if source.url %}
+                                        <a href="{{ source.url }}" target="_blank" rel="noopener">{{ source.name }}</a>
+                                        {% else %}
+                                        {{ source.name }}
+                                        {% endif %}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endif %}
+                        </article>
+                        {% endif %}
+                        {% endfor %}
                     </div>
-                </article>
+                </section>
                 {% endfor %}
-            </section>
-            {% endfor %}
-        </main>
+                
+                <!-- Pagination controls for multi-page -->
+                {% if is_multi_page %}
+                <div class="pagination-info">
+                    <p>Pagina {{ current_page }} di {{ total_pages }}</p>
+                    <div class="pagination-nav">
+                        {% if prev_page %}
+                        <a href="{{ prev_page }}" class="pagination-link prev">&laquo; Pagina precedente</a>
+                        {% endif %}
+                        
+                        {% if next_page %}
+                        <a href="{{ next_page }}" class="pagination-link next">Pagina successiva &raquo;</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+            </main>
+            
+            <!-- Right sidebar with article list -->
+            <aside class="sidebar">
+                <div class="sidebar-content">
+                    <h2 class="sidebar-title">Indice degli Articoli</h2>
+                    
+                    <div class="sidebar-toc">
+                        {% if is_multi_page %}
+                            <div class="page-selector">
+                                <p>Naviga per Pagina:</p>
+                                <ul class="page-list">
+                                    <li><a href="index.html" {% if current_page == 1 %}class="current"{% endif %}>1</a></li>
+                                    {% for i in range(2, total_pages + 1) %}
+                                        <li><a href="{{ page_prefix }}{{ i }}.html" {% if current_page == i %}class="current"{% endif %}>{{ i }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                        
+                        <div class="article-list">
+                            {% if is_first_page and main_article %}
+                            <div class="sidebar-section">
+                                <h3 class="sidebar-section-title">{{ main_article_topic }}</h3>
+                                <ul class="sidebar-article-links">
+                                    <li>
+                                        <a href="#main-article" class="featured-article">
+                                            {{ main_article.title }}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            {% endif %}
+                            
+                            {% for section in sections %}
+                            <div class="sidebar-section">
+                                <h3 class="sidebar-section-title">{{ section.title }}</h3>
+                                <ul class="sidebar-article-links">
+                                    {% for article in section.articles %}
+                                    {% if not (is_first_page and section.is_featured and loop.first) %}
+                                    <li>
+                                        <a href="#{{ article.id }}">
+                                            {{ article.title }}
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
         
         <footer>
             <p>&copy; {{ current_year }} {{ title }}. Generated by Newsgator.</p>
+            
+            {% if show_model_info %}
+            <div class="model-info">
+                <p>Generato utilizzando: {{ llm_model }}{% if imagen_model %} e {{ imagen_model }}{% endif %}</p>
+            </div>
+            {% endif %}
+            
+            <div class="disclaimer">
+                <p>Le notizie vengono aggregate da varie fonti per scopi informativi. I contenuti originali appartengono ai rispettivi proprietari.</p>
+            </div>
         </footer>
     </div>
+    
+    <script>
+        // Add a class to indicate when images fail to load
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('error', function() {
+                    this.classList.add('image-error');
+                    const container = this.closest('.article-image');
+                    if (container) {
+                        container.classList.add('image-error-container');
+                        
+                        // Create a placeholder
+                        const placeholder = document.createElement('div');
+                        placeholder.className = 'image-error-placeholder';
+                        placeholder.innerHTML = '<p>Immagine non disponibile</p>';
+                        container.appendChild(placeholder);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

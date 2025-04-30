@@ -1,0 +1,70 @@
+paths:
+  docs_dir: /Users/fab/GitHub/newsgator/docs
+  templates_dir: /Users/fab/GitHub/newsgator/src/newsgator/templates
+rss_feeds:
+- name: ANSA
+  url: https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml
+  category: news
+- name: Corriere della Sera
+  url: https://xml2.corriereobjects.it/rss/homepage.xml
+  category: news
+- name: La Repubblica
+  url: https://www.repubblica.it/rss/homepage/rss2.0.xml
+  category: news
+- name: Il Sole 24 Ore
+  url: https://www.ilsole24ore.com/rss/italia--attualita.xml
+  category: news
+- name: La Stampa
+  url: https://www.lastampa.it/rss.xml
+  category: news
+content_analysis:
+  similarity_threshold: 0.51
+  max_articles_per_category: 5
+feed_processing:
+  request_timeout: 10
+  max_retries: 2
+  retry_delay: 2
+  max_items_per_feed: 3
+  fetch_delay_min: 0.5
+  fetch_delay_max: 1.5
+llm:
+  provider: lmstudio
+  openai_api_key: ''
+  openai_model: gpt-4
+  lmstudio_base_url: http://localhost:1234/v1
+  lmstudio_model: phi-4-mini-instruct
+  lmstudio_max_context_length: 32768
+  temperature: 0.5
+  max_tokens: 1500
+image_generation:
+  enabled: false
+  imagen_api_key: ''
+  imagen_model: imagen-3.0-generate-002
+  imagen_sample_count: 1
+  imagen_style: newspaper black and white photograph
+  imagen_aspect_ratio: '1:1'
+  imagen_person_generation: ALLOW_ADULT
+  fallback_image: placeholder.jpg
+content_limits:
+  max_title_length: 100
+  max_content_length: 3000
+  max_main_article_length: 12000
+  max_summary_length: 500
+  truncation_suffix: '...'
+html:
+  title: Newsgator Daily
+  description: Daily news aggregated, categorized, and translated.
+  author: Newsgator Bot
+  language: it
+  articles_per_page: 5
+  multi_page: true
+  page_prefix: page
+  show_attribution: false
+  show_model_info: false
+rss:
+  output_rss_feed: true
+  feed_title: Newsgator Daily Feed
+  feed_description: Daily news in Italian, aggregated and translated.
+  feed_link: https://github.com/fabriziosalmi/newsgator
+web_server:
+  port: 8080
