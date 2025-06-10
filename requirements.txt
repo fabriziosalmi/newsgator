@@ -1,5 +1,5 @@
 feedparser==6.0.10
-requests==2.32.2
+requests==2.32.4
 beautifulsoup4==4.12.2
 scikit-learn==1.5.1
 openai==1.6.0
