@@ -26,7 +26,7 @@ Newsgator is an advanced RSS feed aggregator that collects news from various sou
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/newsgator.git
+   git clone https://github.com/fabriziosalmi/newsgator.git
    cd newsgator
    ```
 
@@ -45,7 +45,7 @@ Newsgator is an advanced RSS feed aggregator that collects news from various sou
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/newsgator.git
+   git clone https://github.com/fabriziosalmi/newsgator.git
    cd newsgator
    ```
 
