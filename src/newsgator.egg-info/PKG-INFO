@@ -1,4 +1,4 @@
-Metadata-Version: 2.4
+Metadata-Version: 2.1
 Name: newsgator
 Version: 0.1.0
 Summary: RSS feed aggregator with content similarity analysis, LLM translation to Italian, and newspaper-styled HTML publishing
@@ -12,17 +12,3 @@ Classifier: Programming Language :: Python :: 3.9
 Classifier: Programming Language :: Python :: 3.10
 Classifier: Programming Language :: Python :: 3.11
 Requires-Python: >=3.8
-Requires-Dist: feedparser
-Requires-Dist: requests
-Requires-Dist: beautifulsoup4
-Requires-Dist: scikit-learn
-Requires-Dist: openai
-Requires-Dist: jinja2
-Requires-Dist: markdown
-Requires-Dist: markdown2
-Dynamic: author
-Dynamic: classifier
-Dynamic: keywords
-Dynamic: requires-dist
-Dynamic: requires-python
-Dynamic: summary

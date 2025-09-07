@@ -1,8 +1,8 @@
-feedparser
-requests
 beautifulsoup4
-scikit-learn
-openai
+feedparser
 jinja2
 markdown
 markdown2
+openai
+requests
+scikit-learn

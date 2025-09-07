@@ -1,24 +1,95 @@
 # Newsgator
 
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://python.org)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-0.1.0-orange.svg)](https://github.com/fabriziosalmi/newsgator)
+
+**An intelligent RSS feed aggregator that transforms news into beautiful newspaper-style publications**
+
 Newsgator is an advanced RSS feed aggregator that collects news from various sources, analyzes content for similarity, uses LLM to translate and rewrite content in Italian, and publishes beautifully styled newspaper-like HTML and RSS feeds.
+
+## 📖 Table of Contents
+
+- [Demo](#-demo)
+- [Features](#features)
+- [Quick Start](#-quick-start)
+- [Prerequisites](#-prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [GitHub Pages Publishing](#github-pages-publishing)
+- [Customization](#customization)
+- [Project Structure](#project-structure)
+- [Performance & Limitations](#-performance--limitations)
+- [Troubleshooting](#-troubleshooting)
+- [FAQ](#-faq)
+- [Contributing](#contributing)
+- [License](#license)
+
+## 🎬 Demo
+
+Newsgator transforms RSS feeds into beautiful, newspaper-style web pages:
+
+![Newsgator Demo](https://github.com/user-attachments/assets/e1149003-1667-4c35-bff9-6e8b713dcc56)
+
+*Example of generated newspaper-style HTML output with Italian news articles*
 
 ## Features
 
-- **RSS Feed Collection**: Fetches and parses RSS feeds from multiple news sources
-- **Content Analysis**: Groups similar articles using natural language processing techniques
-- **LLM Translation & Rewriting**: Translates content to Italian and rewrites it in a journalistic style
+- **🔄 RSS Feed Collection**: Fetches and parses RSS feeds from multiple news sources
+- **🧠 Content Analysis**: Groups similar articles using natural language processing techniques
+- **🌐 LLM Translation & Rewriting**: Translates content to Italian and rewrites it in a journalistic style
   - Supports both OpenAI models and local LM Studio models (including phi-4-mini-instruct)
-- **Newspaper-Style HTML**: Generates beautifully formatted HTML with a classic newspaper design
-- **RSS Feed Generation**: Creates an RSS feed of translated and processed articles
-- **Docker Support**: Run in a container with a built-in web server to view the content
+- **📰 Newspaper-Style HTML**: Generates beautifully formatted HTML with a classic newspaper design
+- **📡 RSS Feed Generation**: Creates an RSS feed of translated and processed articles
+- **🐳 Docker Support**: Run in a container with a built-in web server to view the content
 
-## Requirements
+## 🚀 Quick Start
 
-- Python 3.8+
-- Either:
-  - OpenAI API key (for using OpenAI models), OR
-  - Local LM Studio instance running with phi-4-mini-instruct model (default)
-- Docker (optional, for containerized deployment)
+Get Newsgator running in under 5 minutes:
+
+```bash
+# Clone the repository
+git clone https://github.com/fabriziosalmi/newsgator.git
+cd newsgator
+
+# Option 1: Using Docker (recommended)
+docker build -t newsgator .
+docker run -p 8080:8080 newsgator
+# Visit http://localhost:8080 to see your newspaper!
+
+# Option 2: Install locally
+pip install -e .
+python main.py
+# Open docs/index.html in your browser
+```
+
+> **Note**: For LLM functionality, you'll need either OpenAI API access or a local LM Studio instance running.
+
+## 📋 Prerequisites
+
+### System Requirements
+
+- **Python**: 3.8 or higher
+- **Memory**: At least 2GB RAM (4GB recommended for large feeds)
+- **Storage**: 500MB free space for dependencies and generated content
+- **Network**: Internet connection for RSS feeds and LLM API calls
+
+### LLM Requirements (choose one)
+
+**Option A: OpenAI API** (easier setup)
+- OpenAI API key with sufficient credits
+- Models supported: GPT-4, GPT-3.5-turbo, or newer
+
+**Option B: Local LM Studio** (free, privacy-focused)
+- [LM Studio](https://lmstudio.ai/) installed and running
+- phi-4-mini-instruct model downloaded (or compatible model)
+- At least 8GB RAM for model inference
+
+### Optional
+
+- **Docker**: For containerized deployment (recommended)
+- **Git**: For version control and GitHub Pages publishing
 
 ## Installation
 
@@ -183,6 +254,101 @@ newsgator/
 ├── setup.py               # Package setup file
 └── README.md              # This file
 ```
+
+## ⚡ Performance & Limitations
+
+### Processing Time
+- **Small feeds** (5-10 articles): ~2-5 minutes
+- **Medium feeds** (20-30 articles): ~5-15 minutes  
+- **Large feeds** (50+ articles): ~15-30 minutes
+
+*Processing time depends on LLM provider, article length, and system performance.*
+
+### Current Limitations
+- **Language**: Currently optimized for Italian translation only
+- **Article limits**: Maximum of 5 articles per category by default
+- **Feed sources**: Pre-configured Italian news sources (customizable)
+- **LLM context**: Limited by model's maximum context length (32K tokens for phi-4)
+- **Rate limiting**: Subject to OpenAI API rate limits when using OpenAI
+
+### Resource Usage
+- **Memory**: ~1-2GB during processing
+- **Storage**: Generated content typically 10-50MB per run
+- **Network**: Downloads RSS feeds and makes LLM API calls
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**"No articles fetched" error**
+```bash
+# Check internet connection and RSS feed URLs
+curl -I https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml
+
+# Verify config.yaml has valid RSS feeds
+cat config.yaml | grep -A 20 rss_feeds
+```
+
+**LM Studio connection failed**
+```bash
+# Ensure LM Studio is running on correct port
+curl http://localhost:1234/v1/models
+
+# Check if phi-4-mini-instruct model is loaded
+# Open LM Studio GUI and verify model status
+```
+
+**Docker container networking issues**
+```bash
+# For Linux systems, add host networking
+docker run --add-host=host.docker.internal:host-gateway -p 8080:8080 newsgator
+
+# Alternative: Use host network mode
+docker run --network host newsgator
+```
+
+**Out of memory errors**
+- Reduce `max_items_per_feed` in config.yaml
+- Use a smaller LLM model
+- Increase system swap space
+
+**Permission denied writing to docs/**
+```bash
+# Fix permissions
+chmod 755 docs/
+sudo chown -R $USER:$USER docs/
+```
+
+### Debug Mode
+
+Enable debug logging for more detailed information:
+
+```bash
+python main.py --debug
+```
+
+## ❓ FAQ
+
+**Q: Can I use languages other than Italian?**
+A: Currently, Newsgator is optimized for Italian translation. You can modify the LLM prompts in the source code to target other languages.
+
+**Q: How much does it cost to run with OpenAI?**
+A: Costs vary based on article volume and model choice. Typical usage: $0.50-$2.00 per run with GPT-4, $0.10-$0.50 with GPT-3.5-turbo.
+
+**Q: Can I add my own RSS feeds?**
+A: Yes! Edit the `rss_feeds` section in `config.yaml` to add your preferred news sources.
+
+**Q: How often should I run Newsgator?**
+A: For daily news: once per day. For real-time updates: every 2-4 hours. Consider API rate limits and costs.
+
+**Q: Can I customize the newspaper design?**
+A: Yes! Modify the templates in `src/newsgator/templates/` and CSS in `docs/css/styles.css`.
+
+**Q: Is my data private when using local LM Studio?**
+A: Yes! With LM Studio, all processing happens locally. No data is sent to external services except for RSS feed fetching.
+
+**Q: Can I run this on a Raspberry Pi?**
+A: Yes, but LM Studio requires significant resources. Consider using OpenAI API instead for lightweight deployments.
 
 ## License
 
