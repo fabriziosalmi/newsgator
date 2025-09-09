@@ -229,15 +229,12 @@ class ContentAnalyzer:
         results = []
         existing_topics = set()  # Track topics to prevent duplicates
         
-        for cluster in clusters:
+        for i, cluster in enumerate(clusters):
             if not cluster:
                 continue
-                
-            # Get the main article (first in cluster)
-            main_article = cluster[0]
             
-            # Extract topic from main article title
-            topic = main_article.get('title', 'Untitled')
+            # Generate a meaningful topic name for the cluster
+            topic = self._generate_cluster_topic(cluster, i)
             
             # Ensure topic is unique
             base_topic = topic
@@ -250,3 +247,84 @@ class ContentAnalyzer:
             results.append((cluster, topic))
             
         return results
+    
+    def _generate_cluster_topic(self, cluster: List[Dict[str, Any]], cluster_index: int) -> str:
+        """
+        Generate a meaningful topic name for a cluster of articles.
+        
+        Args:
+            cluster: List of articles in the cluster.
+            cluster_index: Index of the cluster for fallback naming.
+            
+        Returns:
+            A descriptive topic name for the cluster.
+        """
+        if not cluster:
+            return f"Notizie {cluster_index + 1}"
+        
+        # Keywords that indicate specific topics/categories
+        topic_keywords = {
+            'politica': ['politica', 'governo', 'ministro', 'premier', 'elezioni', 'parlamento', 'senato', 'camera', 'meloni', 'salvini', 'conte', 'draghi'],
+            'economia': ['economia', 'mercato', 'borsa', 'euro', 'dollaro', 'inflazione', 'pil', 'banca', 'finanza', 'lavoro', 'azienda', 'impresa'],
+            'esteri': ['usa', 'russia', 'cina', 'europa', 'america', 'guerra', 'ucraina', 'putin', 'biden', 'trump', 'nato', 'ue', 'israele', 'ankara', 'turchia', 'siria', 'iran', 'medio oriente', 'raid', 'attacchi'],
+            'cronaca': ['incidente', 'morto', 'ucciso', 'arresto', 'carabinieri', 'polizia', 'magistratura', 'processo', 'condanna'],
+            'salute': ['covid', 'virus', 'vaccino', 'ospedale', 'medico', 'sanitario', 'salute', 'malattia', 'pandemic'],
+            'sport': ['calcio', 'serie a', 'juventus', 'milan', 'inter', 'roma', 'napoli', 'sport', 'campionato', 'gol'],
+            'tecnologia': ['tecnologia', 'internet', 'digitale', 'app', 'smartphone', 'computer', 'ai', 'intelligenza artificiale'],
+            'ambiente': ['ambiente', 'clima', 'riscaldamento', 'green', 'sostenibilità', 'inquinamento', 'energia'],
+            'cultura': ['cultura', 'arte', 'museo', 'libro', 'cinema', 'teatro', 'festival', 'mostra']
+        }
+        
+        # Combine all text from the cluster for analysis
+        all_text = ""
+        for article in cluster:
+            title = article.get('title', '').lower()
+            content = article.get('content', '').lower()
+            summary = article.get('summary', '').lower()
+            all_text += f" {title} {content[:500]} {summary}"  # Limit content to avoid too much text
+        
+        # Count keyword matches for each topic
+        topic_scores = {}
+        for topic, keywords in topic_keywords.items():
+            score = sum(all_text.count(keyword) for keyword in keywords)
+            if score > 0:
+                topic_scores[topic] = score
+        
+        # If we found topic matches, use the highest scoring one
+        if topic_scores:
+            best_topic = max(topic_scores, key=topic_scores.get)
+            topic_names = {
+                'politica': 'Politica',
+                'economia': 'Economia',
+                'esteri': 'Esteri',
+                'cronaca': 'Cronaca',
+                'salute': 'Salute',
+                'sport': 'Sport',
+                'tecnologia': 'Tecnologia',
+                'ambiente': 'Ambiente',
+                'cultura': 'Cultura'
+            }
+            return topic_names.get(best_topic, 'Attualità')
+        
+        # Fallback: try to extract a common theme from article titles
+        main_article = cluster[0]
+        title = main_article.get('title', '')
+        
+        # Extract key words from the title (remove common articles/prepositions)
+        stop_words = {'il', 'la', 'lo', 'le', 'gli', 'un', 'una', 'di', 'da', 'del', 'della', 'dei', 'delle', 'in', 'con', 'per', 'su', 'tra', 'fra', 'a', 'e', 'che', 'è', 'sono', 'ha', 'hanno'}
+        words = [word.strip('.,!?:;') for word in title.lower().split() if len(word) > 3 and word not in stop_words]
+        
+        if words:
+            # Use the first meaningful word as a topic base
+            key_word = words[0]
+            # Capitalize first letter and make it more generic
+            if len(key_word) > 4:
+                return f"Notizie su {key_word.capitalize()}"
+        
+        # Final fallback: generic numbering
+        fallback_topics = [
+            'Attualità', 'Cronaca', 'Politica', 'Esteri', 'Economia', 
+            'Sport', 'Cultura', 'Tecnologia', 'Ambiente', 'Società'
+        ]
+        
+        return fallback_topics[cluster_index % len(fallback_topics)]
