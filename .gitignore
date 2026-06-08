@@ -4,3 +4,4 @@ __pycache__/
 .DS_Store
 src/newsgator/config.py
 newsgator.log
+.venv
