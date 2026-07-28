@@ -5,3 +5,6 @@ __pycache__/
 src/newsgator/config.py
 newsgator.log
 .venv
+
+# Workspace settings (mcp-fleet)
+*.egg-info
