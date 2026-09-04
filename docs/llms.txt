@@ -1,0 +1,20 @@
+# Newsgator Daily
+
+> Quotidiano intelligente con notizie aggregate, categorizzate e riscritte in stile giornalistico tramite modelli linguistici (LLM).
+
+## Panoramica
+
+Newsgator è un progetto open-source sviluppato da Fabrizio Salmi (@fabriziosalmi). Aggrega feed RSS da testate giornalistiche primarie (es. ANSA, Corriere della Sera, La Stampa), applica analisi semantica di similarità per raggruppare le notizie correlate, e utilizza modelli linguistici (OpenAI / LM Studio) per tradurre e comporre una pubblicazione quotidiana in formato giornale d'epoca e feed RSS.
+
+## Edizioni e Contenuti
+
+- [Prima Pagina](https://fabriziosalmi.github.io/newsgator/): Articoli principali del giorno ed editoriale.
+- [Pagina 2](https://fabriziosalmi.github.io/newsgator/page2.html): Notizie di approfondimento e politica.
+- [Pagina 3](https://fabriziosalmi.github.io/newsgator/page3.html): Cronaca e approfondimenti tematici.
+- [Feed RSS](https://fabriziosalmi.github.io/newsgator/feed.xml): Feed di syndication RSS 2.0 delle notizie processate.
+
+## Repository GitHub
+
+- Codice sorgente: https://github.com/fabriziosalmi/newsgator
+- Licenza: MIT
+- Security Policy: https://fabriziosalmi.github.io/newsgator/.well-known/security.txt
