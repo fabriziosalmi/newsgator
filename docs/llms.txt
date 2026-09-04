@@ -1,20 +1,20 @@
 # Newsgator Daily
 
-> Quotidiano intelligente con notizie aggregate, categorizzate e riscritte in stile giornalistico tramite modelli linguistici (LLM).
+> Quotidiano intelligente open-source aggregato con standard aperti e modelli linguistici (LLM).
 
 ## Panoramica
 
-Newsgator è un progetto open-source sviluppato da Fabrizio Salmi (@fabriziosalmi). Aggrega feed RSS da testate giornalistiche primarie (es. ANSA, Corriere della Sera, La Stampa), applica analisi semantica di similarità per raggruppare le notizie correlate, e utilizza modelli linguistici (OpenAI / LM Studio) per tradurre e comporre una pubblicazione quotidiana in formato giornale d'epoca e feed RSS.
+Newsgator è un progetto open-source sviluppato da Fabrizio Salmi (@fabriziosalmi). Aggrega feed RSS aperti da consorzi e fondazioni tecnologiche aperte (W3C Standards, Electronic Frontier Foundation, Open Source Initiative, GitHub Blog, Free Software Foundation), applica analisi semantica e pubblica un'edizione quotidiana in formato giornale classico e syndication RSS 2.0.
 
-## Edizioni e Contenuti
+## Edizioni e Pagine
 
 - [Prima Pagina](https://fabriziosalmi.github.io/newsgator/): Articoli principali del giorno ed editoriale.
-- [Pagina 2](https://fabriziosalmi.github.io/newsgator/page2.html): Notizie di approfondimento e politica.
-- [Pagina 3](https://fabriziosalmi.github.io/newsgator/page3.html): Cronaca e approfondimenti tematici.
-- [Feed RSS](https://fabriziosalmi.github.io/newsgator/feed.xml): Feed di syndication RSS 2.0 delle notizie processate.
+- [Pagina 2](https://fabriziosalmi.github.io/newsgator/page2.html): Approfondimenti su standard web e diritti digitali.
+- [Pagina 3](https://fabriziosalmi.github.io/newsgator/page3.html): Open Source e ingegneria del software.
+- [Feed RSS](https://fabriziosalmi.github.io/newsgator/feed.xml): Feed di syndication RSS 2.0 per feed reader.
 
-## Repository GitHub
+## Repository e Policy
 
-- Codice sorgente: https://github.com/fabriziosalmi/newsgator
+- Repository: https://github.com/fabriziosalmi/newsgator
 - Licenza: MIT
 - Security Policy: https://fabriziosalmi.github.io/newsgator/.well-known/security.txt

@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <title>{{ title }} — Open Web & Standards Daily</title>
     <meta name="description" content="{{ description }}">
     <meta name="author" content="{{ author }}">
+    <link rel="canonical" href="https://fabriziosalmi.github.io/newsgator/{% if current_page and current_page > 1 %}page{{ current_page }}.html{% endif %}">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }} — Open Web & Standards Daily">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:url" content="https://fabriziosalmi.github.io/newsgator/{% if current_page and current_page > 1 %}page{{ current_page }}.html{% endif %}">
+    <meta property="og:image" content="https://fabriziosalmi.github.io/newsgator/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ title }} — Open Web & Standards Daily">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="https://fabriziosalmi.github.io/newsgator/favicon.svg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "NewsMediaOrganization",
+          "@id": "https://fabriziosalmi.github.io/newsgator/#organization",
+          "name": "{{ title }}",
+          "url": "https://fabriziosalmi.github.io/newsgator/",
+          "description": "{{ description }}",
+          "publishingPrinciples": "https://github.com/fabriziosalmi/newsgator"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://fabriziosalmi.github.io/newsgator/#website",
+          "url": "https://fabriziosalmi.github.io/newsgator/",
+          "name": "{{ title }}",
+          "inLanguage": "{{ language }}",
+          "publisher": {
+            "@type": "Person",
+            "name": "Fabrizio Salmi",
+            "url": "https://github.com/fabriziosalmi"
+          }
+        }
+      ]
+    }
+    </script>
     {% if is_multi_page %}
     <meta name="current-page" content="{{ current_page }}">
     {% endif %}

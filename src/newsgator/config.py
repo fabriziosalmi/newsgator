@@ -37,11 +37,11 @@ DEFAULT_CONFIG = {
     
     # RSS Feed sources
     "rss_feeds": [
-        {"name": "ANSA", "url": "https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml", "category": "news"},
-        {"name": "Corriere della Sera", "url": "https://xml2.corriereobjects.it/rss/homepage.xml", "category": "news"},
-        {"name": "La Repubblica", "url": "https://www.repubblica.it/rss/homepage/rss2.0.xml", "category": "news"},
-        {"name": "Il Sole 24 Ore", "url": "https://www.ilsole24ore.com/rss/italia--attualita.xml", "category": "news"},
-        {"name": "La Stampa", "url": "https://www.lastampa.it/rss.xml", "category": "news"},
+        {"name": "W3C Standards", "url": "https://www.w3.org/blog/news/feed/", "category": "standards"},
+        {"name": "Open Source Initiative", "url": "https://opensource.org/feed/", "category": "opensource"},
+        {"name": "Electronic Frontier Foundation", "url": "https://www.eff.org/rss/updates.xml", "category": "internet-rights"},
+        {"name": "GitHub Blog", "url": "https://github.blog/feed/", "category": "development"},
+        {"name": "Free Software Foundation", "url": "https://www.fsf.org/static/fsforg/rss/news.xml", "category": "software"},
     ],
     
     # Content analysis settings
