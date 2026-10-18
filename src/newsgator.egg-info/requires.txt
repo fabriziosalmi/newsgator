@@ -1,8 +1,0 @@
-beautifulsoup4
-feedparser
-jinja2
-markdown
-markdown2
-openai
-requests
-scikit-learn

@@ -1,0 +1,54 @@
+name: CI
+
+# Questo repository non aveva nessun workflow sulle pull request: in
+# .github/workflows/ c'era solo pages.yml, legato al push su main. Niente
+# verificava che il programma stesse in piedi, e le pull request di
+# aggiornamento delle dipendenze arrivavano senza che nessuno le provasse.
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    name: Import e configurazione
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      # 3.10 come il Dockerfile: si verifica la versione con cui il programma
+      # gira davvero, non quella che capita sul runner.
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      # Che le dipendenze fissate si installino davvero e' la prima cosa che una
+      # pull request di dependabot puo' rompere, ed e' il motivo principale per
+      # cui questo job esiste.
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Controlli di base
+        run: python scripts/smoke_check.py
+
+# Perche' non c'e' un job di test: questo repository non ha test. `pytest` sta
+# fra le dipendenze ma non esiste un solo file di test, e inventare una suite
+# non era il compito di questo cambio. scripts/smoke_check.py verifica tre cose
+# che si rompono per davvero (ogni modulo si importa, config.yaml e' valido e
+# contiene le sezioni che il codice legge, load_config gira) e non pretende di
+# essere altro: non verifica il comportamento di niente.
